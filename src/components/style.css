@@ -1,0 +1,26 @@
+.list-group-item{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.list-group-item:nth-child(odd){
+  background-color: #dee2e6;
+}
+
+.col-2, .col-3{
+  float: left;
+  /* margin: 0; */
+}
+
+.text{
+  top: 35%
+}
+
+.employee-name{
+  font-size: 24px;
+}
+
+.list-group {
+  padding-left: 12px;
+}
