@@ -7,7 +7,13 @@ import ListHeader from '../components/ListHeader'
 class Employees extends Component {
 
     state = {
-        employees
+        employeesArr: employees
+    }
+
+    filterArray = (id) => {
+        const filterArr = this.states.employeesArr.filter(employee => employee.id !== id)
+
+        this.setState({employeesArr: filterArr})
     }
 
     render() {
@@ -17,7 +23,7 @@ class Employees extends Component {
             <div className="col-12 employee-container">
                 <div className="row">
                     <ul className="list-group col-12">
-                        {this.state.employees.map(employee => (
+                        {this.state.employeesArr.map(employee => (
                             <EmployeeDetail
                                 id={employee.id}
                                 key={employee.id}
