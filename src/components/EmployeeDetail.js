@@ -1,9 +1,10 @@
 import React from "react";
 import "../components/style.css"
 
+
 function EmployeeDetail(props) {
     return (
-
+        
         <li className="list-group-item">
             <div className="col-2">
                 <img src={props.image} alt="employee" />
@@ -21,7 +22,7 @@ function EmployeeDetail(props) {
                 <p className="text-center">{props.phone}</p>
             </div>
         </li>
-
+        
 
     )
 }
