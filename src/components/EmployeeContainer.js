@@ -12,7 +12,7 @@ class Employees extends Component {
 
     render() {
         return (
-            <div className="col-12">
+            <div className="col-12 employee-container">
                 <div className="row">
                     <ul className="list-group col-12">
                         {this.state.employees.map(employee => (
