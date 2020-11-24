@@ -1,25 +1,25 @@
 import React from 'react'
 import '../../src/components/listHeader.css'
 
-function ListHeader() {
+function ListHeader(props) {
     return (
         <div className="row col-12 list-header">
             <ul className="list-group list-group-header">
                 <li className="list-group-header col-12">
                     <div className="col-2">
-                        <h2 className="list-heading">Image</h2>
+                        <button className="btn btn-dark text-center" onClick={props.sortID}>Image</button>
                     </div>
                     <div className="col-3">
-                        <h2 className="text-center list-heading">Name</h2>
+                        <button className="btn btn-dark text-center list-title" onClick={props.sortName} >Name</button>
                     </div>
                     <div className="col-2">
-                        <h2 className="text-center list-heading">Department</h2>
+                        <button className="btn btn-dark text-center list-title" onClick={props.sortDept}>Dept</button>
                     </div>
                     <div className="col-3">
-                        <h2 className="text-center list-heading">Email</h2>
+                        <button className="btn btn-dark text-center list-title">Email</button>
                     </div>
                     <div className="col-2">
-                        <h2 className="text-center list-heading">Phone</h2>
+                        <button className="btn btn-dark text-center list-title">Phone</button>
                     </div>
                 </li>
             </ul>

@@ -13,9 +13,11 @@
   .list-header{
     margin-top: 75px;
     padding-right: 0px;
-    height: 50px;
+    height: 70px;
 
   }
+
+  
 
   .list-group-header {
   width: 99%;
@@ -31,4 +33,21 @@
   .list-heading{
       font-size: 24px;
       padding-left: 18px;
+  }
+
+  .btn-dark{
+    /* display: block;
+    margin: 0 auto;
+    width: 100%; */
+    font-size: 24px;
+    font-weight: bolder;
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+
+  .list-title{
+    display: block;
+    margin: 0 auto;
+    width: 100%; 
   }
