@@ -6,11 +6,15 @@ import Search from './components/Search'
 
 
 
-function App() {
+function App(props) {
   return (
     <div className = "app">
       <Header />
-      <Search />
+      <Search 
+      value={props.search}
+      handleInputChange={props.handleInputChange}
+      handleFormSubmit={props.handleFormSubmit}
+      />
       <Employees />
     </div>
 
