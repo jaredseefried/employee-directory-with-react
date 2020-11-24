@@ -14,7 +14,7 @@ class Search extends Component {
             .then(res => this.setState({ result: res.data }))
             .catch(err => console.log(err))
     }
-    
+
     handleInputChange = event => {
         const value = event.target.value;
         const name = event.target.name;
@@ -26,9 +26,7 @@ class Search extends Component {
 
     handleFormSubmit = e => {
         e.preventDefault()
-        this.setState({
-            search: ""
-        })
+        this.searchEmployee(this.state.search)
     }
 
     render() {

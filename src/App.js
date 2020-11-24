@@ -12,8 +12,6 @@ function App(props) {
       <Header />
       <Search 
       value={props.search}
-      handleInputChange={props.handleInputChange}
-      handleFormSubmit={props.handleFormSubmit}
       />
       <Employees />
     </div>
