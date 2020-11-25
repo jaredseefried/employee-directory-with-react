@@ -3,7 +3,6 @@ import EmployeeDetail from "./EmployeeDetail";
 import employees from "../employees.json";
 import ListHeader from "./ListHeader";
 import Header from "./Header";
-import "../components/search.css";
 
 class Employees extends Component {
   state = {
@@ -212,13 +211,6 @@ class Employees extends Component {
               value={this.state.search}
               onChange={this.handleInputChange}
             />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-              onClick={this.handleFormSubmit}
-            >
-              Search
-            </button>
           </form>
         </div>
         <ListHeader

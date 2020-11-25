@@ -1,32 +1,55 @@
-.list-group-item{
+.employee-header {
+  height: 200px;
+  background: #262833;
+  color: white;
+}
+
+.header-title {
+  padding-top: 15px;
+}
+
+.form-control {
+  height: 50px;
+  width: 30%;
+  font-size: 24px;
+}
+
+.list-group-item {
   display: block;
   margin: 0 auto;
   width: 100%;
 }
 
-.list-group-item:nth-child(odd){
+.list-group-item:nth-child(odd) {
   background-color: #dee2e6;
 }
 
-.col-2, .col-3{
+.col-2,
+.col-3 {
   float: left;
-  /* margin: 0; */
 }
 
-.text{
-  top: 35%
-}
-
-.employee-name{
-  font-size: 24px;
+.text {
+  top: 35%;
 }
 
 .list-group {
-  padding-left: 12px;
+  padding-left: 15px;
+  border-radius: 0px;
 }
 
-img{
+img {
   border-radius: 50%;
   box-shadow: 0px 0px 3px #696969;
-    border: 3px solid white
+  border: 3px solid white;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-dark {
+  width: 100%;
+}
+
+.btn-dark:hover {
+  width: 100%;
 }

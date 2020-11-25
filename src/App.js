@@ -1,15 +1,12 @@
-import React from 'react'
-import Employees from './components/EmployeeContainer'
-import './App.css';
-
-
+import React from "react";
+import Employees from "./components/EmployeeContainer";
+import "./App.css";
 
 function App(props) {
   return (
-    <div className = "app">
+    <div className="app">
       <Employees />
     </div>
-
   );
 }
 
