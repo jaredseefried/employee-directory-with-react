@@ -16,10 +16,10 @@ function ListHeader(props) {
                         <button className="btn btn-dark text-center list-title" onClick={props.sortDept}>Dept</button>
                     </div>
                     <div className="col-3">
-                        <button className="btn btn-dark text-center list-title">Email</button>
+                        <button className="btn btn-dark text-center list-title" onClick={props.sortEmail}>Email</button>
                     </div>
                     <div className="col-2">
-                        <button className="btn btn-dark text-center list-title">Phone</button>
+                        <button className="btn btn-dark text-center list-title" onClick={props.sortPhone}>Phone</button>
                     </div>
                 </li>
             </ul>

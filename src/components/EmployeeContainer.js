@@ -19,7 +19,7 @@ class Employees extends Component {
     }
 
     sortName = () => {
-        this.setState({...this.state, deptSort: false, idSort: false, phoneSort: false, emailSort: false})
+        this.setState({ ...this.state, deptSort: false, idSort: false, phoneSort: false, emailSort: false })
         const newEmployeesArr = [...this.state.employeesArr]
         if (!this.state.nameSort) {
             const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name))
@@ -29,45 +29,79 @@ class Employees extends Component {
             this.setState({ ...this.state, employeesArr: sortedArr, nameSort: "descending" });
         } else if (this.state.nameSort === "descending") {
             const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
-            this.setState({ ...this.state, employeesArr: sortedArr, nameSort: false });
+            this.setState((s) => ({ ...s, employeesArr: sortedArr, nameSort: false }));
         }
     }
 
     sortDept = () => {
-        this.setState({...this.state, nameSort: false, idSort: false, phoneSort: false, emailSort: false})
-        const newEmployeesArr = this.state.employeesArr.slice(0)
-        const sortedArr = newEmployeesArr.sort((a, b) => a.department.localeCompare(b.department))
-        this.setState((s) => ({ ...s, employeesArr: sortedArr }));
-    }
-
-    sortID = () => {
-        const newEmployeesArr = this.state.employeesArr.slice(0)
-        const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
-        this.setState({ ...this.state, employeesArr: sortedArr });
-    }
-
-    searchEmployee = () => {
-        let search = this.state.search
-        const newEmployeesArr = this.state.employeesArr.slice(0)
-        // const sortedArr = newEmployeesArr.filter(employee => employee.name === name)
-        if (search.length >= 2) {
-            const sortedEmployees = newEmployeesArr.filter(employee => {
-                // console.log(employee.name.indexOf(search) > -1);
-                return employee.name.includes(search)
-            })
-            this.setState({ ...this.state, employeesArr: sortedEmployees });
+        this.setState({ ...this.state, nameSort: false, idSort: false, phoneSort: false, emailSort: false })
+        const newEmployeesArr = [...this.state.employeesArr]
+        if (!this.state.deptSort) {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name))
+            this.setState({ ...this.state, employeesArr: sortedArr, deptSort: "ascending" });
+        } else if (this.state.deptSort === "ascending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name)).reverse()
+            this.setState({ ...this.state, employeesArr: sortedArr, deptSort: "descending" });
+        } else if (this.state.deptSort === "descending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
+            this.setState((s) => ({ ...s, employeesArr: sortedArr, deptSort: false }));
         }
     }
 
-    handleInputChange = event => { 
-        if (event.target.value.includes("b")) return;
-        this.setState((s)=> ({...s, search: event.target.value}))
-        // this.searchEmployee()
-    };
+    sortID = () => {
+        this.setState({ ...this.state, nameSort: false, deptSort: false, phoneSort: false, emailSort: false })
+        const newEmployeesArr = [...this.state.employeesArr]
+        if (!this.state.idSort) {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name))
+            this.setState({ ...this.state, employeesArr: sortedArr, idSort: "ascending" });
+        } else if (this.state.idSort === "ascending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name)).reverse()
+            this.setState({ ...this.state, employeesArr: sortedArr, idSort: "descending" });
+        } else if (this.state.idSort === "descending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
+            this.setState((s) => ({ ...s, employeesArr: sortedArr, idSort: false }));
+        }
+    }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        this.searchEmployee(this.state.search);
+    sortPhone = () => {
+        this.setState({ ...this.state, nameSort: false, deptSort: false, idSort: false, emailSort: false })
+        const newEmployeesArr = [...this.state.employeesArr]
+        if (!this.state.phoneSort) {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name))
+            this.setState({ ...this.state, employeesArr: sortedArr, phoneSort: "ascending" });
+        } else if (this.state.phoneSort === "ascending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name)).reverse()
+            this.setState({ ...this.state, employeesArr: sortedArr, phoneSort: "descending" });
+        } else if (this.state.phoneSort === "descending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
+            this.setState((s) => ({ ...s, employeesArr: sortedArr, phoneSort: false }));
+        }
+    }
+
+    sortEmail = () => {
+        this.setState({ ...this.state, nameSort: false, deptSort: false, idSort: false, phoneSort: false })
+        const newEmployeesArr = [...this.state.employeesArr]
+        if (!this.state.emailSort) {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name))
+            this.setState({ ...this.state, employeesArr: sortedArr, emailSort: "ascending" });
+        } else if (this.state.emailSort === "ascending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.name.localeCompare(b.name)).reverse()
+            this.setState({ ...this.state, employeesArr: sortedArr, emailSort: "descending" });
+        } else if (this.state.emailSort === "descending") {
+            const sortedArr = newEmployeesArr.sort((a, b) => a.id - b.id)
+            this.setState((s) => ({ ...s, employeesArr: sortedArr, emailSort: false }));
+        }
+    }
+
+    handleInputChange = event => {
+        var value = event.target.value;
+        this.setState({ search: value })
+        var filter = employees.filter(employee => {
+            var checkValues = Object.values(employee)
+                .join("").toLowerCase()
+            return checkValues.indexOf(value.toLowerCase()) !== -1
+        })
+        this.setState({ employeesArr: filter })
     };
 
     render() {
@@ -83,7 +117,9 @@ class Employees extends Component {
                 <ListHeader
                     sortName={this.sortName}
                     sortDept={this.sortDept}
-                    sortID={this.sortID} />
+                    sortID={this.sortID}
+                    sortPhone={this.sortPhone}
+                    sortEmail={this.sortEmail} />
                 <div className="col-12 employee-container">
                     <div className="row">
                         <ul className="list-group col-12">
