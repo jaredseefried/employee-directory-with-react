@@ -2,6 +2,8 @@
 
 # Employee Tracker Using React
 
+## https://my-employee-directory-react.herokuapp.com/ 
+
 ![Employee tracker with react](./public/assets/employee-directory-using-react.jpg)
 
 ## Table of Contents
@@ -16,7 +18,7 @@
 
 # Description
 
-This assignment is to create a employee directory with React. It will require you to break up your application's UI into components, manage component state, and respond to user events.
+This employee directory is built using React.js and is a front end only application. The employee data is imported from a .json file and javascript .map and .sort methods are used to render the data upon search of terms. The app uses class components and changes the state of the list upon search.
 
 ## User Story
 
@@ -24,8 +26,9 @@ This assignment is to create a employee directory with React. It will require yo
 
 # Installation Requirements
 
-React
-Bootstrap
+1. Clone repo by entering in the CLI: git clone https://github.com/jaredseefried/employee-directory-with-react.git 
+
+2. Install required libraries from entering in the command line: npm i
 
 # License
 
