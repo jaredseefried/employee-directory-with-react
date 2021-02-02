@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <title>Employee Directory with React</title>
-</head>
+  <head>
+    <!-- meta data -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="title" content="Employee Directory using React.js">
+    <meta name="description"
+      content="This employee directory is built using React.js and is a front end only application. The employee data is imported from a .json file and javascript .map and .sort methods are used to render the data upon search of terms. The app uses class components and changes the state of the list upon search." />
+    <meta property="image"
+      content="https://raw.githubusercontent.com/jaredseefried/employee-directory-with-react/master/public/assets/employee-directory-using-react.jpg">
+    <meta property="url" content="https://my-employee-directory-react.herokuapp.com/">
+  
+    <!-- Facebook meta -->
+    <meta property="og:title" content="COVID19 Data and Statistics">
+    <meta name="og:description"
+      content="This employee directory is built using React.js and is a front end only application. The employee data is imported from a .json file and javascript .map and .sort methods are used to render the data upon search of terms. The app uses class components and changes the state of the list upon search." />
+    <meta property="og:image"
+      content="https://raw.githubusercontent.com/jaredseefried/employee-directory-with-react/master/public/assets/employee-directory-using-react.jpg">
+    <meta property="og:url" content="https://my-employee-directory-react.herokuapp.com/">
+  
+    <!-- Twitter Meta -->
+    <meta name="twitter:title" content="COVID19 Data and Statistics">
+    <meta name="twitter:description" content="This employee directory is built using React.js and is a front end only application. The employee data is imported from a .json file and javascript .map and .sort methods are used to render the data upon search of terms. The app uses class components and changes the state of the list upon search.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/jaredseefried/employee-directory-with-react/master/public/assets/employee-directory-using-react.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+  
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.typekit.net/cox7hmd.css">
+  
+    <title>Employee Directory React Application</title>
+  </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  
   <div id="root"></div>
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
